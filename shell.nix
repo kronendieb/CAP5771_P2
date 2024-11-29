@@ -32,13 +32,9 @@ in pkgs.mkShell{
     ta-lib
   ];
 
-  shellHook = ''
-    echo "Setting up CUDA environment"
-    export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
-  '';
-
   postVenvCreation = ''
     unset SOURCE_DATE_EPOCH
+    export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
     pip install -r requirements.txt
   '';
 
