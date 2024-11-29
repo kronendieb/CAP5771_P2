@@ -1,0 +1,8 @@
+pandas
+ipykernel
+jupyterlab
+matplotlib
+torch
+torchvision
+scikit-learn
+kaggle
